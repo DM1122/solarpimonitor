@@ -9,6 +9,9 @@ services:
       - influxdb-data:/var/lib/influxdb
     environment:
       - INFLUXDB_DB=raspberrypi_metrics
+      - INFLUXDB_ADMIN_ENABLED=true
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=admin123
       - INFLUXDB_USER=admin
       - INFLUXDB_USER_PASSWORD=admin123
       - INFLUXDB_HTTP_AUTH_ENABLED=true
