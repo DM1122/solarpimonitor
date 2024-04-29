@@ -6,7 +6,7 @@ services:
     ports:
       - "8086:8086"
     volumes:
-      - ./influxdb-data:/var/lib/influxdb
+      - influxdb-data:/var/lib/influxdb
     environment:
       - INFLUXDB_HTTP_AUTH_ENABLED=false
       - INFLUXDB_DB=raspberrypi_metrics
@@ -25,7 +25,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./grafana-data:/var/lib/grafana
+      - grafana-data:/var/lib/grafana
     depends_on:
       - influxdb
     environment:
