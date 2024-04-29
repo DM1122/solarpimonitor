@@ -16,7 +16,6 @@ services:
       DOCKER_INFLUXDB_INIT_ORG: GalaxyHeart
       DOCKER_INFLUXDB_INIT_BUCKET: solarpi-bucket
       DOCKER_INFLUXDB_INIT_RETENTION: 1w
-      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: 123456
 
   telegraf:
     image: telegraf
