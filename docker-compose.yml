@@ -34,8 +34,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - grafana_data:/var/lib/grafana
-      - grafana_data:/etc/grafana
+      - grafana-data:/var/lib/grafana
+      - grafana-data:/etc/grafana
     depends_on:
       - influxdb
     environment:
