@@ -1,5 +1,12 @@
 # solarpimonitor
-A monitor for solarpi
+A monitor for solarpi.
 
-## Config
-Need to manually generate InfluxDB and copy paste into `telegraf.conf`
+## Setup
+1. Clone repository
+2. Create `.env` file
+3. Populate known parameters
+4. Run `docker compose up`
+5. Log into InfluxDB
+6. Generate token
+7. Write token into `.env` file
+8. Run `docker compose restart`

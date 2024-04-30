@@ -8,13 +8,14 @@ services:
       - "8086:8086"
     volumes:
       - influxdb-data:/var/lib/influxdb2
+      - influxdb-config:/etc/influxdb2
     environment:
       DOCKER_INFLUXDB_INIT_MODE: setup
       DOCKER_INFLUXDB_INIT_USERNAME: ${ADMIN_USER}
       DOCKER_INFLUXDB_INIT_PASSWORD: ${ADMIN_PASS}
       DOCKER_INFLUXDB_INIT_ORG: ${INFLUX_ORGANIZATION}
       DOCKER_INFLUXDB_INIT_BUCKET: ${INFLUX_BUCKET}
-      DOCKER_INFLUXDB_INIT_RETENTION: 5y
+      DOCKER_INFLUXDB_INIT_RETENTION: 157w # 3 years
 
   telegraf:
     image: telegraf
@@ -27,3 +28,4 @@ services:
 
 volumes:
   influxdb-data:
+  influxdb-config:
