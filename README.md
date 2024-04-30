@@ -9,4 +9,5 @@ A monitor for solarpi.
 5. Log into InfluxDB
 6. Generate token
 7. Write token into `.env` file
+9. Manually populate `telegraf.conf` since environment variables don't seem to be working.
 8. Run `docker compose restart`
