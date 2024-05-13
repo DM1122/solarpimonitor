@@ -20,4 +20,5 @@ RUN poetry install --no-dev
 EXPOSE 80
 
 # Run the application
-CMD ["poetry", "run", "python", "src/main.py"]
+# CMD ["poetry", "run", "python", "src/main.py"]
+CMD ["renogymodbus"]
