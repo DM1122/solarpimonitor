@@ -26,6 +26,19 @@ services:
     depends_on:
       - influxdb
 
+  renogy-app:
+    build: .
+    container_name: renogy
+    ports:
+      - "80:80"  # Map TCP port 80 in the container to port 80 on the Docker host.
+    volumes:
+      - .:/usr/src/app  # Mount the project directory on the host to /usr/src/app in the container
+
+
 volumes:
   influxdb-data:
   influxdb-config:
+
+
+
+
